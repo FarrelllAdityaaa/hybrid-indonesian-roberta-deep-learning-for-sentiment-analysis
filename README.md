@@ -44,66 +44,82 @@
 
 ## 🎯 Overview
 
-This project implements **sentiment analysis** on user reviews of the **SIGNAL** application (Sistem Informasi Registrasi dan Identifikasi Akurat) using a **hybrid deep learning approach** that combines **Indonesian RoBERTa Base Sentiment Classifier** with various sequential architectures: **LSTM, GRU, and CNN**.
+This project implements **sentiment analysis** on user reviews of the **SIGNAL** (SAMSAT DIGITAL NASIONAL) application using a **hybrid deep learning approach** that combines **Indonesian RoBERTa Base Sentiment Classifier** with various sequential architectures: **LSTM, GRU, and CNN**.
 
-### Why This Project Matters
+### Why This Project Matters?
 
-SIGNAL is an official Indonesian National Police (Polri) application that provides online vehicle tax payment services. Understanding user sentiment helps:
+SIGNAL is an official Indonesian National Police (POLRI) application that provides online vehicle tax payment services. Understanding user sentiment helps:
 
-- 📊 **Measure user satisfaction** with digital government services
-- 🔍 **Identify common problems** faced by users
-- 💡 **Provide insights** for application improvement
-- 🎯 **Enhance public service quality** through technology
+- **Measure user satisfaction** with digital government services
+- **Identify common problems** faced by users
+- **Provide insights** for application improvement
+- **Enhance public service quality** through technology
 
 ### Research Foundation
 
 This project is based on state-of-the-art research papers:
-- **RoBERTa-BiLSTM** (Rahman et al., 2025) - IEEE TETCI
-- **RoBERTa-LSTM** (Tan et al., 2022) - IEEE Access
+- **RoBERTa-LSTM: A Hybrid Model for Sentiment Analysis With Transformer and Recurrent Neural Network** (Tan et al., 2022) - [IEEE Access](https://ieeexplore.ieee.org/document/9716923)
+- **RoBERTa-BiLSTM: A Context-Aware Hybrid Model for Sentiment Analysis** (Rahman et al., 2025) - [IEEE TETCI](https://ieeexplore.ieee.org/document/11020722)
 
 ---
 
 ## 📱 About SIGNAL App
 
-**SIGNAL** (Sistem Informasi Registrasi dan Identifikasi Akurat) is Indonesia's official vehicle registration system that enables:
+**SIGNAL (Samsat Digital Nasional)** is Indonesia’s **official national digital SAMSAT application** that enables citizens to access vehicle administration services online.
 
-- 🚗 Online vehicle tax payment
-- 📄 STNK (Vehicle Registration) renewal
-- 📋 Vehicle information checking
-- 🏠 Document delivery to home address
+SIGNAL allows users to perform:
 
-**Download**: [Google Play Store](https://play.google.com/store/apps/details?id=id.go.polri.signal)
+- Annual Motor Vehicle Tax (PKB) payment
+- Annual STNK validation (Pengesahan STNK Tahunan)
+- SWDKLLJ payment (Mandatory Road Traffic Accident Fund)
+- Vehicle ownership and information checking
+- Delivery of official documents to the registered home address
+
+All services are conducted digitally with the issuance of official electronic documents, including:
+- **E-Pengesahan** (POLRI)
+- **E-TBPKP** (Provincial Revenue Agency / Bapenda)
+- **E-KD** (PT Jasa Raharja)
+
+SIGNAL is an **official government application** developed under the supervision of the **National SAMSAT Steering Committee**, which consists of:
+- Indonesian National Police (POLRI)
+- Ministry of Home Affairs of the Republic of Indonesia
+- PT Jasa Raharja
+
+The digital platform is technically developed by **PT Beta Pasifik Indonesia**.
+
+With SIGNAL, vehicle owners (individual ownership, non-corporate) no longer need to visit SAMSAT offices. All annual STNK validation and tax payment processes can be completed **within minutes**, fully online, without queues, making SIGNAL a true **one-stop service accessible via smartphone**.
+
+
+**Download**: [Google Play Store](https://play.google.com/store/apps/details?id=app.signal.id&hl=id)
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 ### Data Collection & Preprocessing
-- 🔍 **Automated Web Scraping**: Collect reviews from Google Play Store
-- 🧹 **Comprehensive Text Preprocessing**: Indonesian-specific text cleaning and normalization
-- 🏷️ **Auto-Labeling**: Using Prompt Engineering with ChatGPT Plus
-- 📊 **Data Visualization**: Comprehensive EDA and distribution analysis
+- **Web Scraping**: Collect reviews from Google Play Store
+- **Comprehensive Text Preprocessing**: Indonesian-specific text cleaning and normalization
+- **Auto-Labeling**: Using Prompt Engineering – Strict Logic with ChatGPT Plus
 
 ### Data Augmentation
-- 🔄 **Synonym Replacement**: Using BERT-based Indonesian language model
-- ⚖️ **Imbalanced Data Handling**: Oversampling minority classes
-- 📈 **Dataset Enrichment**: Three different augmentation strategies
+- **Context-Aware Synonym Replacement**: Utilized **Contextual Word Embedding Augmentation** powered by the **IndoBERT** model (`cahya/bert-base-indonesian-522M`). This method leverages Masked Language Modeling (MLM) to generate contextually appropriate synonyms, preserving the original semantic meaning of the reviews.
+- **Imbalanced Data Handling**: Applied **Synthetic Minority Oversampling** to balance the class distribution. Minority classes (Negative and Neutral) were augmented to match the quantity of the majority class (Positive), ensuring the model learns without bias.
 
 ### Hybrid Deep Learning Models
-- 🤖 **3 Experimental Schemes**:
+- **3 Experimental Schemes**:
   1. **Scheme 1**: IndoRoBERTa + LSTM (Baseline)
   2. **Scheme 2**: IndoRoBERTa + GRU (Data Optimization)
   3. **Scheme 3**: IndoRoBERTa + CNN (Architecture Comparison)
 
 ### Model Evaluation & Deployment
-- 📉 **Comprehensive Metrics**: Accuracy, Precision, Recall, F1-Score
-- 📊 **Confusion Matrix**: Detailed classification visualization
-- 💾 **Model Checkpointing**: Save best performing models
-- 🔮 **Inference Pipeline**: Ready-to-use prediction system
+- **Comprehensive Metrics**: Accuracy, Precision, Recall, F1-Score
+- **Confusion Matrix**: Detailed classification visualization
+- **Model Checkpointing**: Save best performing models
+- **Inference Pipeline**: Ready-to-use prediction system
 
 ---
 
-## 📊 Dataset
+## Dataset
 
 ### Data Sources
 
@@ -212,7 +228,7 @@ This project combines the strengths of two powerful architectures:
 
 ---
 
-## 🏗️ Model Architecture
+## Model Architecture
 
 ### General Hybrid Architecture
 
@@ -222,8 +238,8 @@ Input: "aplikasi sangat membantu dan cepat prosesnya"
         ┌─────────────────────┐
         │  Text Preprocessing │
         │  - Lowercasing      │
-        │  - Special char ✂️  │
-        │  - Stopwords ✂️     │
+        │  - Special char     │
+        │  - Stopwords        │
         │  - Stemming         │
         └─────────────────────┘
                     ↓
@@ -337,7 +353,7 @@ Dropout: 0.3
 
 ---
 
-## 🧪 Experimental Schemes
+## Experimental Schemes
 
 ### Comparison Table
 
@@ -454,7 +470,7 @@ hybrid-indonesian-roberta-deep-learning-for-sentiment-analysis/
 
 ---
 
-## 🛠️ Installation
+## Installation
 
 ### Prerequisites
 
