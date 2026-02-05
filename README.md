@@ -107,9 +107,9 @@ With SIGNAL, vehicle owners (individual ownership, non-corporate) no longer need
 
 ### Hybrid Deep Learning Models
 - **3 Experimental Schemes**:
-  1. **Scheme 1**: IndoRoBERTa + LSTM (Baseline)
-  2. **Scheme 2**: IndoRoBERTa + GRU (Data Optimization)
-  3. **Scheme 3**: IndoRoBERTa + CNN (Architecture Comparison)
+  1. **Scheme 1**: IndoRoBERTa + LSTM
+  2. **Scheme 2**: IndoRoBERTa + GRU
+  3. **Scheme 3**: IndoRoBERTa + CNN
 
 ### Model Evaluation & Deployment
 - **Comprehensive Metrics**: Accuracy, Precision, Recall, F1-Score
