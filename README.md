@@ -28,16 +28,12 @@
 - [Key Features](#-key-features)
 - [Dataset](#-dataset)
 - [Methodology](#-methodology)
-- [Model Architecture](#-model-architecture)
+- [Model Components Detail](#-model-components-detail)
 - [Experimental Schemes](#-experimental-schemes)
 - [Project Structure](#-project-structure)
-- [Installation](#-installation)
-- [Usage](#-usage)
 - [Results](#-results)
-- [Technologies](#-technologies)
 - [References](#-references)
 - [Contributing](#-contributing)
-- [License](#-license)
 - [Contact](#-contact)
 
 ---
@@ -283,7 +279,7 @@ Dropout: 0.3
 |----|-----------|---------------------|----------------------|-----------------------|
 | **1** | **Architecture** | IndoRoBERTa + LSTM | IndoRoBERTa + GRU | IndoRoBERTa + CNN |
 | **2** | **Data Split** | 60:20:20 | 80:10:10 | 70:15:15 |
-| **3** | **Augmentation** | Synonym Replacement (Data train kelas minoritas) | Synonym Replacement (Data train kelas minoritas) | Synonym Replacement (Data train kelas minoritas) |
+| **3** | **Augmentation** | Synonym Replacement (Data train minority classes) | Synonym Replacement (Data train minority classes) | Synonym Replacement (DData train minority classes) |
 | **4** | **Hidden Units** | 256 (BiLSTM) | 256 (BiGRU) | 256 Filters (CNN Kernel=3) |
 | **6** | **Dropout** | 0.3 | 0.3 | 0.3 |
 | **7** | **Learning Rate** | 2e-5 | 2e-5 | 2e-5 |
@@ -432,15 +428,6 @@ Contributions are welcome! Here's how you can help:
 - **Google Colab** - Free GPU resources
 - **Research Authors** - Rahman et al. and Tan et al. for methodology
 - **Open Source Community** - Amazing tools and libraries
-
----
-
-## Project Stats
-
-![GitHub Stars](https://img.shields.io/github/stars/FarrelllAdityaaa/hybrid-indonesian-roberta-deep-learning-for-sentiment-analysis?style=social)
-![GitHub Forks](https://img.shields.io/github/forks/FarrelllAdityaaa/hybrid-indonesian-roberta-deep-learning-for-sentiment-analysis?style=social)
-![GitHub Issues](https://img.shields.io/github/issues/FarrelllAdityaaa/hybrid-indonesian-roberta-deep-learning-for-sentiment-analysis)
-![GitHub Pull Requests](https://img.shields.io/github/issues-pr/FarrelllAdityaaa/hybrid-indonesian-roberta-deep-learning-for-sentiment-analysis)
 
 ---
 
