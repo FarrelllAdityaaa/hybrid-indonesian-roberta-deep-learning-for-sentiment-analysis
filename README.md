@@ -316,11 +316,7 @@ hybrid-indonesian-roberta-deep-learning-for-sentiment-analysis/
 │
 ├── 📂 preprocessing/
 │   └── 📓 Text_Preprocessing_Ulasan_SIGNAL.ipynb
-│       # Text cleaning and preprocessing pipeline:
-│       # - Lowercasing, special char removal
-│       # - Stopword removal, stemming (Sastrawi)
-│       # - Auto-labeling with ChatGPT + Prompt Engineering
-│       # - Data quality checks and validation
+│       # Text cleaning and preprocessing pipeline
 │
 ├── 📂 modeling/
 │   └── 📓 Sentiment_Analysis_Ulasan_Aplikasi_SIGNAL_dengan_Hybrid_Model.ipynb
@@ -328,25 +324,13 @@ hybrid-indonesian-roberta-deep-learning-for-sentiment-analysis/
 │       # ├── Scheme 1: IndoRoBERTa + LSTM (Baseline)
 │       # ├── Scheme 2: IndoRoBERTa + GRU (Optimized)
 │       # └── Scheme 3: IndoRoBERTa + CNN (Comparison)
-│       # Includes:
-│       # - Data augmentation implementation
-│       # - Model architecture definitions
-│       # - Training loops with early stopping
-│       # - Model evaluation and metrics
-│       # - Confusion matrix visualization
 │
 ├── 📂 inference/
 │   └── 📓 Inference_Best_Hybrid_Model_Ulasan_Aplikasi_SIGNAL.ipynb
-│       # Production inference pipeline:
-│       # - Load best performing model
-│       # - Predict sentiment for new reviews
-│       # - Generate probability scores
-│       # - Batch prediction support
+│       # Production inference pipeline
 │
-├── 📄 requirements.txt                            # Python dependencies
-├── 📄 .gitignore                                  # Git ignore rules
-├── 📄 LICENSE                                     # MIT License
-└── 📄 README.md                                   # This file
+├── 📄 requirements.txt
+└── 📄 README.md
 ```
 
 ### File Descriptions
@@ -354,11 +338,11 @@ hybrid-indonesian-roberta-deep-learning-for-sentiment-analysis/
 #### Datasets
 - **`signal_reviews.csv`**: Original reviews scraped from Google Play Store
 - **`signal_reviews_labeled.csv`**: Reviews with sentiment labels (Positif/Negatif/Netral)
-- **`df_train_aug_s*.csv`**: Augmented training datasets for each experimental scheme
+- **`df_train_aug.csv`**: Augmented training datasets for each experimental scheme
 
 #### Notebooks
 - **Scraping**: Automated data collection from Google Play Store
-- **Preprocessing**: Text cleaning, normalization, and labeling
+- **Preprocessing**: Text cleaning, case folding, normalization, and labeling
 - **Modeling**: Complete training pipeline for all 3 schemes
 - **Inference**: Production-ready prediction system
 
@@ -366,9 +350,7 @@ hybrid-indonesian-roberta-deep-learning-for-sentiment-analysis/
 
 ## Results
 
-### Model Performance
-
-> **Note**: Update these metrics after training is complete
+### Model Performance (Best Model: Indonesian RoBERTa + GRU)
 
 | Model | Accuracy | Precision | Recall | F1-Score |
 |-------|----------|-----------|--------|----------|
@@ -390,66 +372,6 @@ hybrid-indonesian-roberta-deep-learning-for-sentiment-analysis/
 weighted avg       0.XX      0.XX      0.XX      XXXX
 ```
 
-### Training Performance
-
-| Metric | Scheme 1 | Scheme 2 | Scheme 3 |
-|--------|----------|----------|----------|
-| **Training Time** | ~XX min | ~XX min | ~XX min |
-| **GPU Memory** | ~X.X GB | ~X.X GB | ~X.X GB |
-| **Best Epoch** | X | X | X |
-| **Convergence** | ✅ | ✅ | ✅ |
-
-*Measured on Google Colab with T4 GPU*
-
-### Key Findings
-
-1. **Best Performing Model**: [To be determined]
-2. **Data Augmentation Impact**: Significantly improves performance on minority classes
-3. **Architecture Comparison**:
-   - **LSTM**: Better at capturing long-term dependencies
-   - **GRU**: More computationally efficient
-   - **CNN**: Faster inference but less contextual
-
-### Confusion Matrix
-
-*Add confusion matrix visualizations here after training*
-
----
-
-## 🔧 Technologies
-
-### Core Frameworks
-- **PyTorch** 2.0+ - Deep learning framework
-- **Transformers** (Hugging Face) 4.30+ - Pre-trained models
-- **CUDA** - GPU acceleration
-
-### NLP & Language Models
-- **Indonesian RoBERTa**: `w11wo/indonesian-roberta-base-sentiment-classifier`
-- **BERT Indonesian**: `cahya/bert-base-indonesian-522M`
-- **Sastrawi** - Indonesian stemmer
-- **NLTK** - Natural language toolkit
-
-### Data Processing
-- **Pandas** - Data manipulation
-- **NumPy** - Numerical computing
-- **Scikit-learn** - ML utilities and metrics
-
-### Data Augmentation
-- **NLPAug** - Text augmentation
-  - ContextualWordEmbsAug for synonym replacement
-
-### Web Scraping
-- **google-play-scraper** - Google Play Store API
-- **python-Levenshtein** - String similarity
-
-### Visualization
-- **Matplotlib** - Plotting
-- **Seaborn** - Statistical visualization
-
-### Development Tools
-- **Jupyter Notebook** - Interactive development
-- **Google Colab** - Cloud GPU environment
-
 ---
 
 ## 📚 References
@@ -466,15 +388,6 @@ weighted avg       0.XX      0.XX      0.XX      XXXX
    IEEE Access, 10, 21517-21525.  
    DOI: [10.1109/ACCESS.2022.3152828](https://doi.org/10.1109/ACCESS.2022.3152828)
 
-3. **Liu, Y., et al.** (2019).  
-   *RoBERTa: A Robustly Optimized BERT Pretraining Approach*.  
-   arXiv preprint arXiv:1907.11692.  
-   [Paper](https://arxiv.org/abs/1907.11692)
-
-4. **Hochreiter, S., & Schmidhuber, J.** (1997).  
-   *Long Short-Term Memory*.  
-   Neural Computation, 9(8), 1735-1780.
-
 ### Pre-trained Models
 
 - [Indonesian RoBERTa Base](https://huggingface.co/w11wo/indonesian-roberta-base-sentiment-classifier)
@@ -490,7 +403,7 @@ weighted avg       0.XX      0.XX      0.XX      XXXX
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Here's how you can help:
 
@@ -504,13 +417,13 @@ Contributions are welcome! Here's how you can help:
 
 ### Areas for Contribution
 
-- 🔧 **Hyperparameter Optimization**: Tuning for better performance
-- 🏗️ **New Architectures**: Implement other hybrid models
-- 📊 **Data Augmentation**: New techniques for Indonesian text
-- 🎨 **Visualization**: Interactive dashboards and plots
-- 📝 **Documentation**: Improve guides and examples
-- 🐛 **Bug Fixes**: Report and fix issues
-- 🧪 **Testing**: Add unit and integration tests
+- **Hyperparameter Optimization**: Tuning for better performance
+- **New Architectures**: Implement other hybrid models
+- **Data Augmentation**: New techniques for Indonesian text
+- **Visualization**: Interactive dashboards and plots
+- **Documentation**: Improve guides and examples
+- **Bug Fixes**: Report and fix issues
+- **Testing**: Add unit and integration tests
 
 ### Code Style
 
@@ -521,13 +434,7 @@ Contributions are welcome! Here's how you can help:
 
 ---
 
-## 📄 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 👤 Contact
+## Contact
 
 **Farrel Paksi Aditya**
 
@@ -539,7 +446,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Kepolisian Republik Indonesia (Polri)** - SIGNAL application development
 - **Wilson Wongso (w11wo)** - Indonesian RoBERTa Base model
@@ -551,30 +458,12 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ---
 
-## 📊 Project Stats
+## Project Stats
 
 ![GitHub Stars](https://img.shields.io/github/stars/FarrelllAdityaaa/hybrid-indonesian-roberta-deep-learning-for-sentiment-analysis?style=social)
 ![GitHub Forks](https://img.shields.io/github/forks/FarrelllAdityaaa/hybrid-indonesian-roberta-deep-learning-for-sentiment-analysis?style=social)
 ![GitHub Issues](https://img.shields.io/github/issues/FarrelllAdityaaa/hybrid-indonesian-roberta-deep-learning-for-sentiment-analysis)
 ![GitHub Pull Requests](https://img.shields.io/github/issues-pr/FarrelllAdityaaa/hybrid-indonesian-roberta-deep-learning-for-sentiment-analysis)
-
----
-
-## 🗺️ Roadmap
-
-- [x] Web scraping implementation
-- [x] Text preprocessing pipeline
-- [x] Auto-labeling with ChatGPT
-- [x] Data augmentation with BERT
-- [x] 3 hybrid model schemes implementation
-- [x] Training and evaluation
-- [x] Inference pipeline
-- [ ] REST API deployment
-- [ ] Streamlit web app
-- [ ] Real-time monitoring dashboard
-- [ ] Docker containerization
-- [ ] CI/CD pipeline
-- [ ] Multi-app sentiment analysis (expand to other apps)
 
 ---
 
@@ -591,22 +480,6 @@ The **auto-labeling** process using ChatGPT Plus with Prompt Engineering is **no
 ### Data Privacy
 
 All reviews are publicly available data from Google Play Store. No personal information is collected or stored beyond public reviews.
-
----
-
-## 📖 Citation
-
-If you use this project in your research, please cite:
-
-```bibtex
-@misc{aditya2026signal,
-  author = {Farrel Paksi Aditya},
-  title = {Hybrid Indonesian RoBERTa Deep Learning for Sentiment Analysis},
-  year = {2026},
-  publisher = {GitHub},
-  url = {https://github.com/FarrelllAdityaaa/hybrid-indonesian-roberta-deep-learning-for-sentiment-analysis}
-}
-```
 
 ---
 
