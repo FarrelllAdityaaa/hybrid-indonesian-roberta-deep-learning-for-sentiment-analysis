@@ -358,20 +358,6 @@ hybrid-indonesian-roberta-deep-learning-for-sentiment-analysis/
 | **Scheme 2: RoBERTa+GRU** | XX.XX% | XX.XX% | XX.XX% | XX.XX% |
 | **Scheme 3: RoBERTa+CNN** | XX.XX% | XX.XX% | XX.XX% | XX.XX% |
 
-### Detailed Classification Report (Example)
-
-```
-              precision    recall  f1-score   support
-
-     Negatif       0.XX      0.XX      0.XX      XXXX
-      Netral       0.XX      0.XX      0.XX      XXXX
-     Positif       0.XX      0.XX      0.XX      XXXX
-
-    accuracy                           0.XX      XXXX
-   macro avg       0.XX      0.XX      0.XX      XXXX
-weighted avg       0.XX      0.XX      0.XX      XXXX
-```
-
 ---
 
 ## 📚 References
@@ -396,7 +382,7 @@ weighted avg       0.XX      0.XX      0.XX      XXXX
 ### Libraries & Documentation
 
 - [PyTorch](https://pytorch.org/docs/)
-- [Hugging Face Transformers](https://huggingface.co/docs/transformers/)
+- [Hugging Face Transformers](https://huggingface.co/)
 - [Google Play Scraper](https://pypi.org/project/google-play-scraper/)
 - [NLPAug](https://github.com/makcedward/nlpaug)
 - [Sastrawi](https://github.com/har07/PySastrawi)
@@ -410,9 +396,9 @@ Contributions are welcome! Here's how you can help:
 ### How to Contribute
 
 1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/AmazingFeature`)
-3. **Commit** your changes (`git commit -m 'Add AmazingFeature'`)
-4. **Push** to the branch (`git push origin feature/AmazingFeature`)
+2. **Create** a feature branch (`git checkout -b feature/YoooFeature`)
+3. **Commit** your changes (`git commit -m 'Add YoooFeature'`)
+4. **Push** to the branch (`git push origin feature/YoooFeature`)
 5. **Open** a Pull Request
 
 ### Areas for Contribution
@@ -425,22 +411,13 @@ Contributions are welcome! Here's how you can help:
 - **Bug Fixes**: Report and fix issues
 - **Testing**: Add unit and integration tests
 
-### Code Style
-
-- Follow PEP 8 for Python code
-- Add docstrings to functions and classes
-- Use type hints where appropriate
-- Write clear commit messages
-
 ---
 
 ## Contact
 
-**Farrel Paksi Aditya**
-
 - 📧 Email: farrelpaksiaditya@gmail.com
 - 💼 GitHub: [@FarrelllAdityaaa](https://github.com/FarrelllAdityaaa)
-- 🔗 LinkedIn: [Your Profile](https://linkedin.com/in/yourprofile)
+- 🔗 LinkedIn: [Farrel Paksi Aditya](https://www.linkedin.com/in/farrel-paksi-aditya/)
 
 **Project Repository**: [https://github.com/FarrelllAdityaaa/hybrid-indonesian-roberta-deep-learning-for-sentiment-analysis](https://github.com/FarrelllAdityaaa/hybrid-indonesian-roberta-deep-learning-for-sentiment-analysis)
 
@@ -453,7 +430,7 @@ Contributions are welcome! Here's how you can help:
 - **Cahya Wirawan** - BERT Indonesian model
 - **Hugging Face** - Transformers library and model hub
 - **Google Colab** - Free GPU resources
-- **Research Authors** - Rahman et al., Tan et al. for methodology
+- **Research Authors** - Rahman et al. and Tan et al. for methodology
 - **Open Source Community** - Amazing tools and libraries
 
 ---
@@ -467,7 +444,7 @@ Contributions are welcome! Here's how you can help:
 
 ---
 
-## ⚠️ Important Notes
+## Important Notes ⚠️⚠️⚠️
 
 ### Disclaimer
 
@@ -485,9 +462,7 @@ All reviews are publicly available data from Google Play Store. No personal info
 
 <div align="center">
 
-### 🌟 If you find this project helpful, please give it a star! 🌟
-
-**Made with ❤️ for Indonesian NLP Research**
+### If you find this project helpful, please give it a star! 🌟🌟🌟
 
 ---
 
