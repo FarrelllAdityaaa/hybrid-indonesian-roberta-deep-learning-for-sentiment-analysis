@@ -1,0 +1,11 @@
+pandas
+numpy
+matplotlib.pyplot
+seaborn
+Levenshtein
+Sastrawi
+google_play_scraper
+torch
+transformers
+nlpaug
+sklearn
