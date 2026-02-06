@@ -421,8 +421,8 @@ Contributions are welcome! Here's how you can help:
 
 ## Acknowledgments
 
-- **Kepolisian Republik Indonesia (Polri)** - SIGNAL application development
-- **Wilson Wongso (w11wo)** - Indonesian RoBERTa Base model
+- **Kepolisian Republik Indonesia (POLRI)** - SIGNAL application development
+- **Wilson Wongso** - Indonesian RoBERTa Base model
 - **Cahya Wirawan** - BERT Indonesian model
 - **Hugging Face** - Transformers library and model hub
 - **Google Colab** - Free GPU resources
