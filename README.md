@@ -5,9 +5,9 @@
 
 <div align="center">
 
-[![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-EE4C2C?style=flat&logo=pytorch&logoColor=white)](https://pytorch.org/)
-[![Transformers](https://img.shields.io/badge/🤗%20Transformers-4.30+-yellow.svg)](https://huggingface.co/transformers/)
+[![Python](https://img.shields.io/badge/Python-3.12+-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.9+-EE4C2C?style=flat&logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![Transformers](https://img.shields.io/badge/🤗%20Transformers-5.0+-yellow.svg)](https://huggingface.co/transformers/)
 [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1-7Ua617JZ59N9X4PgpFDWJHmKF4QLtd2?usp=sharing)
 
 </div>
@@ -281,14 +281,14 @@ Dropout: 0.3
 | **2** | **Data Split** | 60:20:20 | 80:10:10 | 70:15:15 |
 | **3** | **Augmentation** | Synonym Replacement (Data train minority classes) | Synonym Replacement (Data train minority classes) | Synonym Replacement (DData train minority classes) |
 | **4** | **Hidden Units** | 256 (BiLSTM) | 256 (BiGRU) | 256 Filters (CNN Kernel=3) |
-| **6** | **Dropout** | 0.3 | 0.3 | 0.3 |
-| **7** | **Learning Rate** | 2e-5 | 2e-5 | 2e-5 |
-| **8** | **Batch Size** | 32 | 32 | 32 |
-| **9** | **Max Epochs** | 10 | 10 | 10 |
-| **10** | **Optimizer** | AdamW | AdamW | AdamW |
-| **11** | **Loss Function** | CrossEntropyLoss | CrossEntropyLoss | CrossEntropyLoss |
-| **12** | **Early Stopping** | Target Acc > 94% | Target Acc > 94% | Target Acc > 94% |
-| **13** | **Samples** | ~14,610 | ~19,479 | ~17,046 |
+| **5** | **Dropout** | 0.3 | 0.3 | 0.3 |
+| **6** | **Learning Rate** | 2e-5 | 2e-5 | 2e-5 |
+| **7** | **Batch Size** | 32 | 32 | 32 |
+| **8** | **Max Epochs** | 10 | 10 | 10 |
+| **9** | **Optimizer** | AdamW | AdamW | AdamW |
+| **10** | **Loss Function** | CrossEntropyLoss | CrossEntropyLoss | CrossEntropyLoss |
+| **11** | **Early Stopping** | Target Acc > 94% | Target Acc > 94% | Target Acc > 94% |
+| **12** | **Samples** | ~14,610 | ~19,479 | ~17,046 |
 
 ---
 
@@ -346,13 +346,13 @@ hybrid-indonesian-roberta-deep-learning-for-sentiment-analysis/
 
 ## Results
 
-### Model Performance (Best Model: Indonesian RoBERTa + GRU)
+### Model Performance
 
 | Model | Accuracy | Precision | Recall | F1-Score |
 |-------|----------|-----------|--------|----------|
-| **Scheme 1: RoBERTa+LSTM** | XX.XX% | XX.XX% | XX.XX% | XX.XX% |
-| **Scheme 2: RoBERTa+GRU** | XX.XX% | XX.XX% | XX.XX% | XX.XX% |
-| **Scheme 3: RoBERTa+CNN** | XX.XX% | XX.XX% | XX.XX% | XX.XX% |
+| **Scheme 1: RoBERTa+LSTM** | 98.52% | 98.55% | 98.52% | 98.53% |
+| **Scheme 2: RoBERTa+GRU** | 98.66% | 98.68% | 98.66% | 98.66% |
+| **Scheme 3: RoBERTa+CNN** | 98.75% | 98.75% | 98.75% | 98.75% |
 
 ---
 
@@ -451,8 +451,6 @@ All reviews are publicly available data from Google Play Store. No personal info
 
 ### If you find this project helpful, please give it a star! 🌟🌟🌟
 
----
-
-*Last Updated: February 5, 2026*
+*Last Updated: February 6, 2026*
 
 </div>
